@@ -17,7 +17,7 @@ function Container({data}) {
                     <>
                         {data.map((user)=>{
                             return(
-                                <Usercard user={user} />
+                                <Usercard key={user.id} user={user} />
                             )
                         })}
                     </>

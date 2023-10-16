@@ -1,9 +1,14 @@
 import './App.css';
-import Home from './components/Home';
-import { useState} from 'react';
+import { useState, lazy, Suspense} from 'react';
+
 import { SearchQuery } from './util/queryContext';
-import {Route, Routes } from 'react-router-dom';
-import Profilecard from './components/Profilecard';
+import {Route, Routes,} from 'react-router-dom';
+import Spinner from './util/Spinner';
+
+const Home = lazy(() => import('./components/Home'))
+const Profilecard = lazy(() => import('./components/Profilecard'))
+
+
 
 
 const dummyData = {
@@ -35,10 +40,12 @@ function App() {
   return (
     <SearchQuery.Provider value={theme}>
       <div className="App">
+        <Suspense fallback={<Spinner/>}>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/details/:slug' element={<Profilecard/>} />
         </Routes>
+        </Suspense>
       </div>
     </SearchQuery.Provider>
   );

@@ -28,13 +28,21 @@ function Profilecard() {
     <button onClick={() => navigate(-1)}>Back</button>
         <section className='details'>
             {/* name */}
-            {name ? (<>
-            </>):(<>
+            {name ? (
+                <div className='profile-details'>
+                    <h4>Name:</h4>
+                    <p>{name}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/* email */}
-            {email ? (<>
-            </>):(<>
+            {email ? (
+                <div className='profile-details'>
+                    <h4>Email:</h4>
+                    <p>{email}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/* twitter */}
@@ -49,7 +57,9 @@ function Profilecard() {
 
             {/* locatiomn */}
             {location ? (<>
-            </>):(<>
+            <h4>Location:</h4>
+            {location}
+            </>):(<>''
             </>)}
 
             {/* locatiomn */}
@@ -59,6 +69,8 @@ function Profilecard() {
 
             {/* followring */}
             {following ? (<>
+            <h4>Number of following:</h4>
+            <p></p>
             </>):(<>
             </>)}
 

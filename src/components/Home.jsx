@@ -1,7 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useState, useEffect} from 'react'
-import axios, { Axios } from 'axios'
-import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers'
+import { useState} from 'react'
+import axios from 'axios'
 import Container from './Container'
 
 function Home() {

@@ -187,14 +187,13 @@ article.usercard {
   width: 48em;
   height: 48em;
   background-image:
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0),
-    radial-gradient(circle 10px, #FFF 100%, transparent 0);
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0),
+    radial-gradient(circle 10px, #ff006e 100%, transparent 0);
   background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
     13em -13em, -13em -13em, 13em 13em, -13em 13em;
   background-repeat: no-repeat;
@@ -205,7 +204,7 @@ article.usercard {
 
 .loader::after {
   font-size: 1px;
-  background: #fff;
+  background: #ff006e;
   animation: bounce 1s ease-in infinite;
 }
 
@@ -255,4 +254,5 @@ article.usercard {
 
 .details {
   border: none;
+
 }
