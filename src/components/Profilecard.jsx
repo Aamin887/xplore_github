@@ -21,7 +21,7 @@ function Profilecard() {
         fetchDetails()
     }, [slug])
 
-    const {name, email, hireable, company, followers, following, blog, location, bio, twitter_username, public_repos} = details
+    const {name, email, company, followers, following, blog, location, twitter_username, public_repos} = details
 
     return (
     <>
@@ -46,13 +46,20 @@ function Profilecard() {
             </>)}
 
             {/* twitter */}
-            {twitter_username? (<>
-            </>):(<>
+            {twitter_username? (
+                <div className='profile-details'>
+                    <h4>Twitter:</h4>
+                    <p>{twitter_username}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/*company*/}
-            {company ? (<>
-            </>):(<>
+            {company ? (
+                <div className='profile-details'>
+                    <h4>Works at:</h4>
+                    <p>{company}</p>
+                </div>):(<>
             </>)}
 
             {/* locatiomn */}
@@ -68,37 +75,39 @@ function Profilecard() {
             </>)}
 
             {/* followring */}
-            {following ? (<>
-            <h4>Number of following:</h4>
-            <p></p>
-            </>):(<>
+            {following ? (
+                <div className='profile-details'>
+                    <h4>Following:</h4>
+                    <p>{following}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/* followers */}
-            {followers ? (<>
-            </>):(<>
+            {followers ? (
+                <div className='profile-details'>
+                    <h4>Followers:</h4>
+                    <p>{followers}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/* blog */}
-            {blog ? (<>
-            </>):(<>
-            </>)}
-
-            {/* bio */}
-            {bio ? (<>
-            </>):(<>
-            </>)}
-
-            {/* hireable */}
-            {hireable? (<>
-
-            </>):(<>
+            {blog ? (
+                <div className='profile-details'>
+                    <h4>Website:</h4>
+                    <p>{blog}</p>
+                </div>
+            ):(<>
             </>)}
 
             {/* hireable */}
-            {public_repos? (<>
-                {public_repos}
-            </>):(<>
+            {public_repos? (
+                <div className='profile-details'>
+                    <h4>Number of repos:</h4>
+                    <p>{public_repos}</p>
+                </div>
+            ):(<>
             </>)}
 
         </section>
