@@ -20,98 +20,107 @@ function Profilecard() {
         }
         fetchDetails()
     }, [slug])
+    console.log(details)
 
-    const {name, email, company, followers, following, blog, location, twitter_username, public_repos} = details
+    const {login ,avatar_url ,name, email, company, followers, following, blog, location, twitter_username, public_repos} = details
 
     return (
-    <>
+    <div className='about-info'>
     <button onClick={() => navigate(-1)}>Back</button>
         <section className='details'>
-            {/* name */}
-            {name ? (
-                <div className='profile-details'>
-                    <h4>Name:</h4>
-                    <p>{name}</p>
-                </div>
-            ):(<>
-            </>)}
 
-            {/* email */}
-            {email ? (
-                <div className='profile-details'>
-                    <h4>Email:</h4>
-                    <p>{email}</p>
-                </div>
-            ):(<>
-            </>)}
+            <div className='profile-details-img'>
+                <img src={avatar_url} alt={'profile-img'+ login}/>
+            </div>
 
-            {/* twitter */}
-            {twitter_username? (
-                <div className='profile-details'>
-                    <h4>Twitter:</h4>
-                    <p>{twitter_username}</p>
-                </div>
-            ):(<>
-            </>)}
+            <div className='profile-details-info'>
+                {/* name */}
+                {name ? (
+                    <div className='profile-details'>
+                        <h4>Name:</h4>
+                        <p>{name}</p>
+                    </div>
+                ):(<>
+                </>)}
 
-            {/*company*/}
-            {company ? (
-                <div className='profile-details'>
-                    <h4>Works at:</h4>
-                    <p>{company}</p>
+                {/* email */}
+                {email ? (
+                    <div className='profile-details'>
+                        <h4>Email:</h4>
+                        <p>{email}</p>
+                    </div>
+                ):(<>
+                </>)}
+
+                {/* twitter */}
+                {twitter_username? (
+                    <div className='profile-details'>
+                        <h4>Twitter:</h4>
+                        <p>{twitter_username}</p>
+                    </div>
+                ):(<>
+                </>)}
+
+                {/*company*/}
+                {company ? (
+                    <div className='profile-details'>
+                        <h4>Works at:</h4>
+                        <p>{company}</p>
+                    </div>):(<>
+                </>)}
+
+                {/* locatiomn */}
+                {location ? (<div className='profile-details'>
+                <h4>Location:
+                </h4>
+                <p>{location}</p>
                 </div>):(<>
-            </>)}
+                </>)}
 
-            {/* locatiomn */}
-            {location ? (<>
-            <h4>Location:</h4>
-            {location}
-            </>):(<>''
-            </>)}
+                {/* locatiomn */}
+                {location ? (<>
+                </>):(<>
+                </>)}
 
-            {/* locatiomn */}
-            {location ? (<>
-            </>):(<>
-            </>)}
+                {/* followring */}
+                {following ? (
+                    <div className='profile-details'>
+                        <h4>Following:</h4>
+                        <p>{following}</p>
+                    </div>
+                ):(<>
+                </>)}
 
-            {/* followring */}
-            {following ? (
-                <div className='profile-details'>
-                    <h4>Following:</h4>
-                    <p>{following}</p>
-                </div>
-            ):(<>
-            </>)}
+                {/* followers */}
+                {followers ? (
+                    <div className='profile-details'>
+                        <h4>Followers:</h4>
+                        <p>{followers}</p>
+                    </div>
+                ):(<>
+                </>)}
 
-            {/* followers */}
-            {followers ? (
-                <div className='profile-details'>
-                    <h4>Followers:</h4>
-                    <p>{followers}</p>
-                </div>
-            ):(<>
-            </>)}
+                {/* blog */}
+                {blog ? (
+                    <div className='profile-details'>
+                        <h4>Website:</h4>
+                        <p>{blog}</p>
+                    </div>
+                ):(<>
+                </>)}
 
-            {/* blog */}
-            {blog ? (
-                <div className='profile-details'>
-                    <h4>Website:</h4>
-                    <p>{blog}</p>
-                </div>
-            ):(<>
-            </>)}
-
-            {/* hireable */}
-            {public_repos? (
-                <div className='profile-details'>
-                    <h4>Number of repos:</h4>
-                    <p>{public_repos}</p>
-                </div>
-            ):(<>
-            </>)}
-
+                {/* hireable */}
+                {public_repos? (
+                    <div className='profile-details'>
+                        <h4>Number of repos:</h4>
+                        <p>{public_repos}</p>
+                        <a className='btn' href="#">See them</a>
+                    </div>
+                ):(<>
+                </>)}
+            </div>
         </section>
-    </>
+    </div>
     )
 }
 
