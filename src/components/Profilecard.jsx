@@ -57,6 +57,7 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Twitter:</h4>
                         <p>{twitter_username}</p>
+                        <a className='btn' href={`https://twitter.com/${twitter_username}`}>visit</a>
                     </div>
                 ):(<>
                 </>)}
@@ -77,16 +78,12 @@ function Profilecard() {
                 </div>):(<>
                 </>)}
 
-                {/* locatiomn */}
-                {location ? (<>
-                </>):(<>
-                </>)}
-
                 {/* followring */}
                 {following ? (
                     <div className='profile-details'>
                         <h4>Following:</h4>
                         <p>{following}</p>
+                        <a className="btn" href={details.following_url}>see them</a>
                     </div>
                 ):(<>
                 </>)}
@@ -95,7 +92,8 @@ function Profilecard() {
                 {followers ? (
                     <div className='profile-details'>
                         <h4>Followers:</h4>
-                        <p>{followers}</p>
+                        <p>{followers} profiles</p>
+                        <a className='btn' href={details.followers_url} target='blank'>see them</a>
                     </div>
                 ):(<>
                 </>)}
@@ -104,7 +102,7 @@ function Profilecard() {
                 {blog ? (
                     <div className='profile-details'>
                         <h4>Website:</h4>
-                        <p>{blog}</p>
+                        <a className='btn' href={blog} target='blank'>{blog}</a>
                     </div>
                 ):(<>
                 </>)}
@@ -114,7 +112,9 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Number of repos:</h4>
                         <p>{public_repos}</p>
-                        <a className='btn' href="#">See them</a>
+                        <a className='btn' href={details.repos_url} target='blank'>
+                            See them
+                        </a>
                     </div>
                 ):(<>
                 </>)}
