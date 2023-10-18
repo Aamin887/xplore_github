@@ -167,6 +167,12 @@ article.usercard {
   
 }
 
+.btn-back {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
 .content{
   margin: auto;
   min-height: 300px;
@@ -271,6 +277,11 @@ article.usercard {
 
 .about-info {
   width: 100vw;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   padding: 20px;
   background-color: #380958;
@@ -280,6 +291,7 @@ article.usercard {
   border: none; 
   display: flex;
   gap: 1rem;
+  width: 500px;
   background-color: #2d4365;
   margin: 10px;
   color: aliceblue;

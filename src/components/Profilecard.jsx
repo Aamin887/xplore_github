@@ -26,7 +26,7 @@ function Profilecard() {
 
     return (
     <div className='about-info'>
-    <button onClick={() => navigate(-1)}>Back</button>
+    <button className='btn-back' onClick={() => navigate(-1)}>Back</button>
         <section className='details'>
 
             <div className='profile-details-img'>
