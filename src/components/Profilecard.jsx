@@ -83,7 +83,7 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Following:</h4>
                         <p>{following}</p>
-                        <Link className="btn" to={`/following/${login}`}>see them</Link>
+                        <Link className="btn" to={`/following/${login}`} target='blank'>see them</Link>
                     </div>
                 ):(<>
                 </>)}
@@ -93,7 +93,7 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Followers:</h4>
                         <p>{followers} profiles</p>
-                        <Link className='btn' to={`/followers/${login}`}>see them</Link>
+                        <Link className='btn' to={`/followers/${login}`} target='blank'>see them</Link>
 
                     </div>
                 ):(<>
@@ -113,9 +113,9 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Number of repos:</h4>
                         <p>{public_repos}</p>
-                        <a className='btn' href={details.repos_url} target='blank'>
+                        <Link className='btn' to={`/repos/${login}`} target='blank'>
                             See them
-                        </a>
+                        </Link>
                     </div>
                 ):(<>
                 </>)}

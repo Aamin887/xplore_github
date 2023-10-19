@@ -9,6 +9,7 @@ const Home = lazy(() => import('./components/Home'))
 const Profilecard = lazy(() => import('./components/Profilecard'))
 const Followers = lazy(() => import('./components/Followers'))
 const Following = lazy(() => import('./components/Following'))
+const Repos = lazy(() => import('./components/Repos'))
 
 
 
@@ -46,8 +47,8 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/details/:slug' element={<Profilecard/>} />
             <Route path='/followers/:user' element={<Followers/>} />
-
             <Route path='/following/:user' element={<Following/>} />
+            <Route path='/repos/:user' element={<Repos/>} />
           </Routes>
         </Suspense>
       </div>
