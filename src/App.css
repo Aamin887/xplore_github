@@ -126,7 +126,7 @@ article.usercard {
   align-items: flex-end;
   display: flex;
   border: none;
-   color: whitesmoke;
+  color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0 0 3px rgb(202, 200, 200);
   justify-content: space-around;
@@ -291,7 +291,7 @@ article.usercard {
   border: none; 
   display: flex;
   gap: 1rem;
-  width: 500px;
+  width: 800px;
   background-color: #2d4365;
   margin: 10px;
   color: aliceblue;
@@ -306,6 +306,8 @@ article.usercard {
 
 .profile-details-img img {
   border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
 }
 
 .profile-details {

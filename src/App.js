@@ -7,7 +7,8 @@ import Spinner from './util/Spinner';
 
 const Home = lazy(() => import('./components/Home'))
 const Profilecard = lazy(() => import('./components/Profilecard'))
-
+const Followers = lazy(() => import('./components/Followers'))
+const Following = lazy(() => import('./components/Following'))
 
 
 
@@ -41,10 +42,13 @@ function App() {
     <SearchQuery.Provider value={theme}>
       <div className="App">
         <Suspense fallback={<Spinner/>}>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/details/:slug' element={<Profilecard/>} />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/details/:slug' element={<Profilecard/>} />
+            <Route path='/followers/:user' element={<Followers/>} />
+
+            <Route path='/following/:user' element={<Following/>} />
+          </Routes>
         </Suspense>
       </div>
     </SearchQuery.Provider>

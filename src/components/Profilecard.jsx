@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {useEffect, useState} from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 
 function Profilecard() {
     const [details, setDetails] = useState({})
@@ -83,7 +83,7 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Following:</h4>
                         <p>{following}</p>
-                        <a className="btn" href={details.following_url}>see them</a>
+                        <Link className="btn" to={`/following/${login}`}>see them</Link>
                     </div>
                 ):(<>
                 </>)}
@@ -93,7 +93,8 @@ function Profilecard() {
                     <div className='profile-details'>
                         <h4>Followers:</h4>
                         <p>{followers} profiles</p>
-                        <a className='btn' href={details.followers_url} target='blank'>see them</a>
+                        <Link className='btn' to={`/followers/${login}`}>see them</Link>
+
                     </div>
                 ):(<>
                 </>)}
